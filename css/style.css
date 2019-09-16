@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin");
+@import url("https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap");
+
+* {
+  /* margin: 0; */
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #cce2ff; */
+  font-weight: normal;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(101, 75, 196, 0.87); */
+}
+
+/* #nav { */
+/* overflow: hidden; */
+/* position: relative;
+  text-align: center;
+} */
+
+/* NavBar */
+
+#nav ul {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#nav ul li {
+  background-color: black;
+  display: block;
+  list-style: none;
+  font-size: 2em;
+  padding: 0 0.5em;
+  /* right: 30px;
+  bottom: 28px; */
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+/* Portfolio name */
+#name {
+  font-size: 11em;
+}
+
+#chinese-name {
+  font-family: "Ma Shan Zheng";
+  font-size: 3em;
+}
