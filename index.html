@@ -16,66 +16,156 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Victor Zhang</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
     <div id="nav">
       <ul>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Experiences</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experiences</a></li>
         <li><a href="#">Passions</a></li>
-        <li><a href="#">Fun Stuff</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="#fun-stuff">Fun Stuff</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
       </ul>
     </div>
 
-    <h1 id="name">Victor Zhang</h1>
-    <h1 id="chinese-name">张敏智</h1>
+    <div id="welcome" class="section">
+      <h1 id="name">Victor Zhang</h1>
+      <h1 id="tag-line">Curious, Thinker, Web Developer</h1>
+    </div>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui molestiae
-      minima error quod. Dolores, soluta fuga! Odio, minima odit! Deleniti
-      cumque porro iure optio voluptatem veniam vel corrupti voluptas veritatis?
-    </p>
+    <div class="container">
+      <div id="about-me" class="section">
+        <h3>About Me</h3>
+        <p>
+          Hello! I am Web developer graduate from General Assembly's 3 month
+          full-time coding bootcamp.
+        </p>
+        <p>
+          I am super passionate about someday becoming a multi instrumentalist,
+          but also thinking of innovative solutions to random problems I come
+          across. I have been able to pursue music on my own spare time, but
+          never had the knowledge or skills, nor knew where to start to build
+          applications based of my ideas.
+        </p>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-      excepturi cumque, illo non, id officia perspiciatis voluptatem iste, fuga
-      atque eveniet dolore molestias accusamus. Mollitia iste iusto
-      necessitatibus quidem atque!
-    </p>
+        <p>
+          General Assembly has equipped me with the skills to start developing
+          applications, but most importantly the skill to comprehend, learn and
+          use new technologies on my own. I have since become a huge fan of web
+          animations and JavaScript. I am excited to use these skills to start
+          developing applications for my ideas and I also aspire to master all
+          things animations.
+        </p>
+        <p>
+          I am lucky to have realised during my last job as an administration
+          officer, that I crave challenge have a need to stimulate my mind
+          everyday to learn something new. Now I have a vast list of things I
+          want to work on, since I discovered the endless possibilities and
+          projects one can do with just one programming language.
+        </p>
+        <p>
+          But for now, I will start diving deep into the world of animations,
+          with canvas and GreenSock.js.
+        </p>
+      </div>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-      perspiciatis sunt eum aperiam possimus, et odio, deleniti reprehenderit
-      officia quia delectus aut tempora expedita libero id accusamus debitis
-      quae. Exercitationem!
-    </p>
-    <p>
-      Facilis beatae ad ducimus ipsa cum perferendis eum et ipsum expedita.
-      Obcaecati reiciendis, quis molestiae laborum alias tempora aut ducimus
-      eligendi deleniti libero perferendis tempore, eum expedita minima harum.
-      Aspernatur.
-    </p>
-    <p>
-      Eveniet, debitis facere distinctio placeat alias tempore voluptatum
-      repellat, exercitationem sapiente enim nesciunt pariatur qui, minima
-      accusantium! Vitae vel dolorum, quasi officia inventore iste ratione?
-      Dicta quibusdam cum suscipit doloremque.
-    </p>
-    <p>
-      Eveniet reprehenderit facere, hic a labore ullam velit atque perferendis!
-      Architecto illo neque incidunt aliquid voluptate sint quisquam in dolor.
-      Omnis quidem quam asperiores aperiam in provident consectetur nam modi!
-    </p>
-    <p>
-      Pariatur nostrum natus, debitis sed unde, quaerat tempora neque quo
-      doloribus eaque dolorum cum nihil commodi architecto velit ducimus
-      deserunt adipisci similique! Repellat quos sit laudantium exercitationem
-      labore, fuga id.
-    </p>
+      <div class="divider"></div>
+
+      <div id="projects" class="section">
+        <h3>Projects</h3>
+        <div id="project-container">
+          <div class="project">
+            <p class="project-name">Bomberman</p>
+            <img src="./images/bomberman1.jpg" alt="Bomberman" />
+            <div class="project-info">
+              <p>link</p>
+              <p>Remake of an all-time favorite retro game Bomberman!</p>
+              <p>Technologies: HTML, CSS and JavaScript</p>
+              <p>Features</p>
+            </div>
+          </div>
+          <div class="project">
+            <p class="project-name">Nico</p>
+            <img src="./images/nico.jpg" alt="Nico" />
+            <div class="project-info">
+              <p>link</p>
+              <p>
+                A web application to help users/job seekers browse, find and
+                follow different companies whitin to their field of interest
+              </p>
+              <p>
+                Technologies: Ruby on Rails, JavaScript, Postgress, Heroku, The
+                Muse API
+              </p>
+              <p>Features</p>
+            </div>
+          </div>
+          <div class="project">
+            <p class="project-name">Dripples</p>
+            <img src="./images/dripples.jpg" alt="Dripples" />
+            <div class="project-info">
+              <p>link</p>
+              <p>
+                A fun way to organize and manage any and all kinds of ideas,
+                categorize them and connect with other users with similar ideas
+              </p>
+              <p>
+                Technologies (Front-end): React, Material-UI, p5.js
+              </p>
+              <p>Features</p>
+            </div>
+          </div>
+          <div class="project">
+            <p class="project-name">Musin</p>
+            <img src="./images/musin.jpg" alt="Musin" />
+            <div class="project-info">
+              <p>link</p>
+              <p>
+                An essential tool for new musicians to get all they need to
+                start playing a new song all at once in one spot.
+              </p>
+              <p>
+                Technologies: React, Tone.js, Tonejs-instruments.js, Spotify
+                API, GuitarParty API
+              </p>
+              <p>Features</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="experience" class="section">
+        <h3>Experiences</h3>
+        (work history/resume)
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <h3>Passions</h3>
+        (maybe wont add)
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="fun-stuff" class="section">
+        <h3>Fun Stuff</h3>
+        maze, etc
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="contact-me" class="section">
+        <h3>Contact me</h3>
+      </div>
+    </div>
 
     <footer>
       <h1>Coming soon footer</h1>
