@@ -25,53 +25,70 @@ $(document).ready(function() {
     );
   });
 
-  let $featuredImage = null;
+  let $featured = null;
 
   $("#project-container").on("click", "img", function(e) {
+    console.log(
+      $(this)
+        .prev()
+        .css("visibility") === "hidden"
+    );
     if (
       $(this)
-        .next()
-        .is(":hidden") &&
-      !$featuredImage
+        .prev()
+        .css("visibility") === "hidden" &&
+      !$featured
     ) {
-      $featuredImage = $(this);
-      $featuredImage.prev().fadeToggle();
-      $featuredImage.next().fadeToggle();
+      $featured = $(this);
+      $featured
+        .prev()
+        .css("visibility", "visible")
+        .animate({ opacity: 1.0 }, 400);
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
     } else if (
       $(this)
-        .next()
-        .is(":hidden") &&
-      $featuredImage
+        .prev()
+        .css("visibility") === "hidden" &&
+      $featured
     ) {
-      $featuredImage.prev().fadeToggle();
-      $featuredImage.next().fadeToggle();
-      $featuredImage = $(this);
-      $featuredImage.prev().fadeToggle();
-      $featuredImage.next().fadeToggle();
+      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
+        $featured.prev().css("visibility", "hidden");
+        $featured = $(this);
+        $featured
+          .prev()
+          .css("visibility", "visible")
+          .animate({ opacity: 1.0 }, 400);
+        $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      });
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
     } else if (
       $(this)
-        .next()
-        .is(":visible")
+        .prev()
+        .css("visibility") === "visible" &&
+      $featured
     ) {
-      $featuredImage.prev().fadeToggle();
-      $featuredImage.next().fadeToggle();
-      $featuredImage = null;
+      console.log($featured);
+      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
+        console.log($featured);
+        $featured.prev().css("visibility", "hidden");
+        $featured = null;
+      });
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
     }
   });
 
   $(document).on("click", "body", function(e) {
     if (
       $(e.target).is(".project-name") ||
-      ($(e.target).is(".project-info p") && $featuredImage)
+      ($(e.target).is(".project-info p") && $featured)
     ) {
       return;
-    } else if (
-      !$(e.target).is("#project-container div img") &&
-      $featuredImage
-    ) {
-      $featuredImage.prev().fadeToggle();
-      $featuredImage.next().fadeToggle();
-      $featuredImage = null;
+    } else if (!$(e.target).is("#project-container div img") && $featured) {
+      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
+        $featured.prev().css("visibility", "hidden");
+        $featured = null;
+      });
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
     }
   });
 });

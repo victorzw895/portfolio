@@ -50,7 +50,7 @@ position: relative;
   text-align: center;
 }
 
-a {
+#nav ul li a {
   display: flex;
   flex: 0 0 auto;
   padding: 0.348214286em 0.57142857em;
@@ -61,7 +61,7 @@ a {
   color: #aaa;
 }
 
-a::before {
+#nav ul li a::before {
   position: absolute;
   content: "";
   top: 0;
@@ -71,7 +71,7 @@ a::before {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-a:hover {
+#nav ul li a:hover {
   color: rgb(255, 255, 255, 0.85) !important;
 }
 
@@ -157,7 +157,7 @@ a:hover {
 
 /* Project Section */
 #project-container {
-  margin-top: 13%;
+  /* margin-top: 13%; */
   display: flex;
   justify-content: space-around;
 }
@@ -168,12 +168,13 @@ a:hover {
   border: 2px solid rgba(128, 128, 128, 0.3);
   width: 120px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .project-name {
-  text-align: center;
-  display: none;
+  opacity: 0;
+  text-align: center !important;
+  visibility: hidden;
 }
 
 .project-info {
