@@ -2,11 +2,19 @@ $(document).ready(function() {
   // $('nav ul li a')
   $currentLink = null;
 
+  $("body").scroll(function(e) {
+    console.log("scrolling");
+    console.log(e.target.scrollTop);
+  });
+
   $("#nav ul li").on("click", "a", function(e) {
     e.preventDefault();
     // Animate NavBar Link
     if ($currentLink) {
-      $currentLink.animate({ color: "#aaa", backgroundColor: "black" }, 500);
+      $currentLink.animate(
+        { color: "#aaa", backgroundColor: "rgb(15, 15, 15)" },
+        500
+      );
     }
     $currentLink = $(this);
     $currentLink.animate({ color: "black", backgroundColor: "white" }, 500);

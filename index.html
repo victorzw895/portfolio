@@ -26,11 +26,21 @@
       <ul>
         <li><a href="#about-me">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#fun-stuff">Fun Stuff</a></li>
         <li><a href="#experience">Experiences</a></li>
         <li><a href="#">Passions</a></li>
-        <li><a href="#fun-stuff">Fun Stuff</a></li>
         <li><a href="#contact-me">Contact Me</a></li>
       </ul>
+
+      <select>
+        <option value="" selected="selected">Select</option>
+
+        <option value="#about-me">About Me</option>
+        <option value="#projects">Projects</option>
+        <option value="#fun-stuff">Fun Stuff</option>
+        <option value="#experience">Experiences</option>
+        <option value="#contact-me">Contact Me</option>
+      </select>
     </div>
 
     <div id="welcome" class="section">
@@ -40,170 +50,186 @@
 
     <div class="container">
       <div id="about-me" class="section">
-        <h3>About Me</h3>
-        <p>
-          Hello! I am Web developer graduate from General Assembly's 3 month
-          full-time coding bootcamp.
-        </p>
-        <p>
-          I am super passionate about someday becoming a multi instrumentalist,
-          but also thinking of innovative solutions to random problems I come
-          across. I have been able to pursue music on my own spare time, but
-          never had the knowledge or skills, nor knew where to start to build
-          applications based of my ideas.
-        </p>
+        <div class="wrapper">
+          <h3>About Me</h3>
+          <p>
+            Hello! I am Web developer graduate from General Assembly's 3 month
+            full-time coding bootcamp.
+          </p>
+          <p>
+            I am super passionate about someday becoming a multi
+            instrumentalist, but also thinking of innovative solutions to random
+            problems I come across. I have been able to pursue music on my own
+            spare time, but never had the knowledge or skills, nor knew where to
+            start to build applications based of my ideas.
+          </p>
 
-        <p>
-          General Assembly has equipped me with the skills to start developing
-          applications, but most importantly the skill to comprehend, learn and
-          use new technologies on my own. I have since become a huge fan of web
-          animations and JavaScript. I am excited to use these skills to start
-          developing applications for my ideas and I also aspire to master all
-          things animations.
-        </p>
-        <p>
-          I am lucky to have realised during my last job as an administration
-          officer, that I crave challenge have a need to stimulate my mind
-          everyday to learn something new. Now I have a vast list of things I
-          want to work on, since I discovered the endless possibilities and
-          projects one can do with just one programming language.
-        </p>
-        <p>
-          But for now, I will start diving deep into the world of animations,
-          with canvas and GreenSock.js.
-        </p>
+          <p>
+            General Assembly has equipped me with the skills to start developing
+            applications, but most importantly the skill to comprehend, learn
+            and use new technologies on my own. I have since become a huge fan
+            of web animations and JavaScript. I am excited to use these skills
+            to start developing applications for my ideas and I also aspire to
+            master all things animations.
+          </p>
+          <p>
+            I am lucky to have realised during my last job as an administration
+            officer, that I crave challenge have a need to stimulate my mind
+            everyday to learn something new. Now I have a vast list of things I
+            want to work on, since I discovered the endless possibilities and
+            projects one can do with just one programming language.
+          </p>
+          <p>
+            But for now, I will start diving deep into the world of animations,
+            with canvas and GreenSock.js.
+          </p>
+        </div>
       </div>
 
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
 
       <div id="projects" class="section">
-        <h3>Projects</h3>
-        <div id="project-container">
-          <div class="project">
-            <p class="project-name">Bomberman</p>
-            <img src="./images/bomberman1.jpg" alt="Bomberman" />
+        <div class="wrapper">
+          <h3>Projects</h3>
+          <div id="project-container">
+            <div class="project">
+              <p class="project-name">Bomberman</p>
+              <img src="./images/bomberman1.jpg" alt="Bomberman" />
+            </div>
+            <div class="project">
+              <p class="project-name">Nico</p>
+              <img src="./images/nico.jpg" alt="Nico" />
+            </div>
+            <div class="project">
+              <p class="project-name">Dripples</p>
+              <img src="./images/dripples.jpg" alt="Dripples" />
+            </div>
+            <div class="project">
+              <p class="project-name">Musin</p>
+              <img src="./images/musin.jpg" alt="Musin" />
+            </div>
           </div>
-          <div class="project">
-            <p class="project-name">Nico</p>
-            <img src="./images/nico.jpg" alt="Nico" />
+
+          <div class="wrapper">
+            <div class="project-info bomberman">
+              <p>Remake of an all-time favorite retro game Bomberman!</p>
+              <p>Technologies: HTML, CSS and JavaScript</p>
+              <p>Features</p>
+              <p>Move: arrow keys, Spacebar: bombs</p>
+              <p>
+                <a
+                  href="https://victorzw895.github.io/project0-bomberman/"
+                  target="_blank"
+                  >https://victorzw895.github.io/project0-bomberman/</a
+                >
+              </p>
+            </div>
+            <div class="project-info nico">
+              <p>
+                A web application to help users/job seekers browse, find and
+                follow different companies whitin to their field of interest
+              </p>
+              <p>
+                Technologies: Ruby on Rails, JavaScript, Postgress, Heroku, The
+                Muse API
+              </p>
+              <p>Features</p>
+              <p>User login, search filter</p>
+              <p>
+                <a
+                  href="https://project-crispy-hamster.herokuapp.com/"
+                  target="_blank"
+                  >https://project-crispy-hamster.herokuapp.com/</a
+                >
+              </p>
+            </div>
+            <div class="project-info dripples">
+              <p>
+                A fun way to organize and manage any and all kinds of ideas,
+                categorize them and connect with other users with similar ideas
+              </p>
+              <p>
+                Technologies (Front-end): React, Material-UI, p5.js
+              </p>
+              <p>Features</p>
+              <p>
+                <a
+                  href="https://herdmangct.github.io/dripple-client/#/"
+                  target="_blank"
+                  >https://herdmangct.github.io/dripple-client/#/</a
+                >
+              </p>
+            </div>
+            <div class="project-info musin">
+              <p>
+                An essential tool for new musicians to get all they need to
+                start playing a new song all at once in one spot.
+              </p>
+              <p>
+                Technologies: React, Tone.js, Tonejs-instruments.js, Spotify
+                API, GuitarParty API
+              </p>
+              <p>Features</p>
+              <p>
+                In-built digital keyboard, spotify music player, chords,
+                autoscroll
+              </p>
+              <p>
+                <a href="https://victorzw895.github.io/musin/" target="_blank"
+                  >https://victorzw895.github.io/musin/</a
+                >
+              </p>
+            </div>
           </div>
-          <div class="project">
-            <p class="project-name">Dripples</p>
-            <img src="./images/dripples.jpg" alt="Dripples" />
-          </div>
-          <div class="project">
-            <p class="project-name">Musin</p>
-            <img src="./images/musin.jpg" alt="Musin" />
-          </div>
-        </div>
-        <div class="project-info bomberman">
-          <p>Remake of an all-time favorite retro game Bomberman!</p>
-          <p>Technologies: HTML, CSS and JavaScript</p>
-          <p>Features</p>
-          <p>Move: arrow keys, Spacebar: bombs</p>
-          <p>
-            <a
-              href="https://victorzw895.github.io/project0-bomberman/"
-              target="_blank"
-              >https://victorzw895.github.io/project0-bomberman/</a
-            >
-          </p>
-        </div>
-        <div class="project-info nico">
-          <p>
-            A web application to help users/job seekers browse, find and follow
-            different companies whitin to their field of interest
-          </p>
-          <p>
-            Technologies: Ruby on Rails, JavaScript, Postgress, Heroku, The Muse
-            API
-          </p>
-          <p>Features</p>
-          <p>User login, search filter</p>
-          <p>
-            <a
-              href="https://project-crispy-hamster.herokuapp.com/"
-              target="_blank"
-              >https://project-crispy-hamster.herokuapp.com/</a
-            >
-          </p>
-        </div>
-        <div class="project-info dripples">
-          <p>
-            A fun way to organize and manage any and all kinds of ideas,
-            categorize them and connect with other users with similar ideas
-          </p>
-          <p>
-            Technologies (Front-end): React, Material-UI, p5.js
-          </p>
-          <p>Features</p>
-          <p>
-            <a
-              href="https://herdmangct.github.io/dripple-client/#/"
-              target="_blank"
-              >https://herdmangct.github.io/dripple-client/#/</a
-            >
-          </p>
-        </div>
-        <div class="project-info musin">
-          <p>
-            An essential tool for new musicians to get all they need to start
-            playing a new song all at once in one spot.
-          </p>
-          <p>
-            Technologies: React, Tone.js, Tonejs-instruments.js, Spotify API,
-            GuitarParty API
-          </p>
-          <p>Features</p>
-          <p>
-            In-built digital keyboard, spotify music player, chords, autoscroll
-          </p>
-          <p>
-            <a href="https://victorzw895.github.io/musin/" target="_blank"
-              >https://victorzw895.github.io/musin/</a
-            >
-          </p>
         </div>
       </div>
 
-      <div class="divider"></div>
-
-      <div id="experience" class="section">
-        <h3>Experiences</h3>
-        (work history/resume)
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="section">
-        <h3>Passions</h3>
-        (maybe wont add)
-      </div>
-
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
 
       <div id="fun-stuff" class="section">
-        <h3>Fun Stuff</h3>
-        <p>
-          <a
-            href="https://victorzw895.github.io/animations/moving-circles/index.html"
-            target="_blank"
-            >Circles screensaver</a
-          >
-        </p>
-        <p>
-          <a
-            href="https://victorzw895.github.io/animations/maze/index.html"
-            target="_blank"
-            >Maze + Mini game</a
-          >
-        </p>
+        <div class="wrapper">
+          <h3>Fun Stuff</h3>
+          <p>
+            <a
+              href="https://victorzw895.github.io/animations/moving-circles/index.html"
+              target="_blank"
+              >Circles screensaver</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://victorzw895.github.io/animations/maze/index.html"
+              target="_blank"
+              >Maze + Mini game</a
+            >
+          </p>
+        </div>
       </div>
 
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
+
+      <div id="experience" class="section">
+        <div class="wrapper">
+          <h3>Experiences</h3>
+          (work history/resume)
+        </div>
+      </div>
+
+      <!-- <div class="divider"></div> -->
+
+      <div class="section">
+        <div class="wrapper">
+          <h3>Passions</h3>
+          (maybe wont add)
+        </div>
+      </div>
+
+      <!-- <div class="divider"></div> -->
 
       <div id="contact-me" class="section">
-        <h3>Contact me</h3>
+        <div class="wrapper">
+          <h3>Contact me</h3>
+        </div>
       </div>
     </div>
 

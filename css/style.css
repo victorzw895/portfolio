@@ -31,8 +31,12 @@ position: relative;
 
 /* NavBar */
 
+#nav select {
+  display: none;
+}
+
 #nav ul {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   display: flex;
   justify-content: flex-start;
   position: fixed;
@@ -75,12 +79,20 @@ position: relative;
   color: rgb(255, 255, 255, 0.85) !important;
 }
 
+/* @media (max-width: 960px) {
+  nav ul {
+    display: none;
+  }
+  nav select {
+    display: inline-block;
+  }
+} */
+
 /* Portfolio name */
 
 #welcome {
   height: 100vh;
   width: 100vw;
-  margin-bottom: 30px;
   background-image: url("../images/mountains.jpg");
   background-size: cover;
 }
@@ -122,7 +134,7 @@ position: relative;
 /* Container */
 .container {
   margin: 0 auto;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 
 .divider {
@@ -137,6 +149,21 @@ position: relative;
 .section {
   min-height: 100vh; /* minus nav height */
   /* padding-top: 50px; */
+}
+
+#projects {
+  background-color: rgba(22, 22, 22, 0.8);
+  color: white;
+}
+
+#projects * {
+  color: white;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  margin-bottom: 60px;
 }
 
 .section h3 {
@@ -169,6 +196,13 @@ position: relative;
   width: 120px;
   object-fit: cover;
   margin-bottom: 30px;
+  transition: all 0.35s ease;
+}
+
+.project img:hover {
+  /* webkit-filter: blur(4px); Chrome, Safari, Opera */
+  transition: all 0.35s ease;
+  filter: blur(4px);
 }
 
 .project-name {
