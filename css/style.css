@@ -23,12 +23,6 @@ body {
   /* background-color: rgba(101, 75, 196, 0.87); */
 }
 
-/* #nav {
-overflow: hidden;
-position: relative;
-  text-align: center;
-} */
-
 /* NavBar */
 
 #nav select {
@@ -79,6 +73,7 @@ position: relative;
   color: rgb(255, 255, 255, 0.85) !important;
 }
 
+/* Responsive on mobile */
 /* @media (max-width: 960px) {
   nav ul {
     display: none;
@@ -89,7 +84,6 @@ position: relative;
 } */
 
 /* Portfolio name */
-
 #welcome {
   height: 100vh;
   width: 100vw;
@@ -155,10 +149,10 @@ position: relative;
   background-color: rgba(22, 22, 22, 0.8);
   color: white;
 }
-
+/* 
 #projects * {
   color: white;
-}
+} */
 
 .wrapper {
   margin: 0 auto;
@@ -213,4 +207,36 @@ position: relative;
 
 .project-info {
   display: none;
+  position: fixed;
+  top: 14%;
+  width: 700px;
+  height: 75vh;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 10px;
+  z-index: 2;
 }
+
+div.unfocused {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* div.unfocused::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+} */
+
+/* test section */
+/* .test {
+  position: fixed;
+  top: 13%;
+  width: 700px;
+  height: 80vh;
+  background: rgba(245, 245, 245, 0.9);
+} */

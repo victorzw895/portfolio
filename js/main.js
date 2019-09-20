@@ -36,11 +36,6 @@ $(document).ready(function() {
   let $featured = null;
 
   $("#project-container").on("click", "img", function(e) {
-    console.log(
-      $(this)
-        .prev()
-        .css("visibility") === "hidden"
-    );
     if (
       $(this)
         .prev()
@@ -53,6 +48,7 @@ $(document).ready(function() {
         .css("visibility", "visible")
         .animate({ opacity: 1.0 }, 400);
       $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(".blur").addClass("unfocused");
     } else if (
       $(this)
         .prev()
@@ -61,6 +57,7 @@ $(document).ready(function() {
     ) {
       $featured.prev().animate({ opacity: 0.0 }, 400, () => {
         $featured.prev().css("visibility", "hidden");
+        $(".blur").removeClass("unfocused");
         $featured = $(this);
         $featured
           .prev()
@@ -69,6 +66,7 @@ $(document).ready(function() {
         $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
       });
       $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(".blur").addClass("unfocused");
     } else if (
       $(this)
         .prev()
@@ -82,6 +80,7 @@ $(document).ready(function() {
         $featured = null;
       });
       $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(".blur").removeClass("unfocused");
     }
   });
 
@@ -97,6 +96,7 @@ $(document).ready(function() {
         $featured = null;
       });
       $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(".blur").removeClass("unfocused");
     }
   });
 });
