@@ -147,12 +147,11 @@ body {
 
 #projects {
   background-color: rgba(22, 22, 22, 0.8);
+}
+
+#projects h3 {
   color: white;
 }
-/* 
-#projects * {
-  color: white;
-} */
 
 .wrapper {
   margin: 0 auto;
@@ -184,6 +183,8 @@ body {
 }
 
 .project img {
+  box-sizing: border-box;
+  padding: 10px;
   height: 120px;
   border-radius: 20%;
   border: 2px solid rgba(128, 128, 128, 0.3);
@@ -214,6 +215,31 @@ body {
   background: rgba(245, 245, 245, 1);
   border-radius: 10px;
   z-index: 2;
+}
+
+.info {
+  width: 50%;
+}
+
+.image {
+  align-self: center;
+}
+
+.image img {
+  box-sizing: border-box;
+  padding: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+.project-info p {
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.project-info p:first-child {
+  padding: 40px 20px 10px;
+  font-size: 2em;
 }
 
 div.unfocused {

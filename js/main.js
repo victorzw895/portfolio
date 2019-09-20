@@ -47,7 +47,10 @@ $(document).ready(function() {
         .prev()
         .css("visibility", "visible")
         .animate({ opacity: 1.0 }, 400);
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(`.${$featured.attr("alt").toLowerCase()}`)
+        .css("display", "flex")
+        .hide()
+        .fadeIn();
       $(".blur").addClass("unfocused");
     } else if (
       $(this)
@@ -63,9 +66,12 @@ $(document).ready(function() {
           .prev()
           .css("visibility", "visible")
           .animate({ opacity: 1.0 }, 400);
-        $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+        $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
       });
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(`.${$featured.attr("alt").toLowerCase()}`)
+        .css("display", "flex")
+        .hide()
+        .fadeIn();
       $(".blur").addClass("unfocused");
     } else if (
       $(this)
@@ -79,7 +85,7 @@ $(document).ready(function() {
         $featured.prev().css("visibility", "hidden");
         $featured = null;
       });
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
       $(".blur").removeClass("unfocused");
     }
   });
@@ -95,7 +101,7 @@ $(document).ready(function() {
         $featured.prev().css("visibility", "hidden");
         $featured = null;
       });
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeToggle();
+      $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
       $(".blur").removeClass("unfocused");
     }
   });
