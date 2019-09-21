@@ -177,7 +177,7 @@ body {
 
 /* Project Section */
 #project-container {
-  /* margin-top: 13%; */
+  margin-top: 7%;
   display: flex;
   justify-content: space-around;
 }
@@ -227,9 +227,10 @@ body {
 
 .image img {
   box-sizing: border-box;
-  padding: 50px;
-  width: 300px;
-  height: 300px;
+  padding: 5px;
+  width: 330px;
+  height: 250px;
+  border-radius: 3px;
 }
 
 .project-info p {
@@ -238,7 +239,8 @@ body {
 }
 
 .project-info p:first-child {
-  padding: 40px 20px 10px;
+  padding: 30px 20px;
+  margin: 0;
   font-size: 2em;
 }
 

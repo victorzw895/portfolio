@@ -36,72 +36,43 @@ $(document).ready(function() {
   let $featured = null;
 
   $("#project-container").on("click", "img", function(e) {
-    if (
-      $(this)
-        .prev()
-        .css("visibility") === "hidden" &&
-      !$featured
-    ) {
-      $featured = $(this);
+    let $this = $(
+      `.${$(this)
+        .attr("alt")
+        .toLowerCase()}`
+    );
+    if ($this.css("display") === "none" && !$featured) {
+      $featured = $this;
       $featured
-        .prev()
-        .css("visibility", "visible")
-        .animate({ opacity: 1.0 }, 400);
-      $(`.${$featured.attr("alt").toLowerCase()}`)
         .css("display", "flex")
         .hide()
         .fadeIn();
       $(".blur").addClass("unfocused");
-    } else if (
-      $(this)
-        .prev()
-        .css("visibility") === "hidden" &&
+    } else if ($this.css("display") === "none" && $featured) {
+      $(".blur").removeClass("unfocused");
+      $featured.fadeOut();
+      $featured = $this;
       $featured
-    ) {
-      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
-        $featured.prev().css("visibility", "hidden");
-        $(".blur").removeClass("unfocused");
-        $featured = $(this);
-        $featured
-          .prev()
-          .css("visibility", "visible")
-          .animate({ opacity: 1.0 }, 400);
-        $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
-      });
-      $(`.${$featured.attr("alt").toLowerCase()}`)
         .css("display", "flex")
         .hide()
         .fadeIn();
       $(".blur").addClass("unfocused");
-    } else if (
-      $(this)
-        .prev()
-        .css("visibility") === "visible" &&
-      $featured
-    ) {
-      console.log($featured);
-      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
-        console.log($featured);
-        $featured.prev().css("visibility", "hidden");
-        $featured = null;
-      });
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
+    } else if ($this.css("display") === "none" && $featured) {
+      $featured.fadeOut();
+      $featured = null;
       $(".blur").removeClass("unfocused");
     }
   });
 
   $(document).on("click", "body", function(e) {
     if (
-      $(e.target).is(".project-name") ||
+      $(e.target).is(".project-info") ||
       ($(e.target).is(".project-info p") && $featured)
     ) {
       return;
     } else if (!$(e.target).is("#project-container div img") && $featured) {
-      $featured.prev().animate({ opacity: 0.0 }, 400, () => {
-        $featured.prev().css("visibility", "hidden");
-        $featured = null;
-      });
-      $(`.${$featured.attr("alt").toLowerCase()}`).fadeOut();
+      $featured.fadeOut();
+      $featured = null;
       $(".blur").removeClass("unfocused");
     }
   });
