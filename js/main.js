@@ -7,6 +7,43 @@ $(document).ready(function() {
   // ? null
   // : ()
 
+  $(".sidebar .icon").on("click", function(e) {
+    $(".sidebar .dropdown").css({ display: "inline-block" });
+  });
+
+  $(".sidebar .icon").hover(
+    function(e) {
+      let icon = $(this).attr("alt");
+      $(this).attr("src", `./images/${icon}-white.png`);
+    },
+    function(e) {
+      let icon = $(this).attr("alt");
+      $(this).attr("src", `./images/${icon}1.png`);
+    }
+  );
+
+  $(".nav-right img").hover(
+    function(e) {
+      let media = $(this).attr("alt");
+      $(this).attr("src", `./images/${media}-white.png`);
+    },
+    function(e) {
+      let media = $(this).attr("alt");
+      $(this).attr("src", `./images/${media}1.png`);
+    }
+  );
+
+  $(".nav-right img").hover(
+    function(e) {
+      let media = $(this).attr("alt");
+      $(this).attr("src", `./images/${media}-white.png`);
+    },
+    function(e) {
+      let media = $(this).attr("alt");
+      $(this).attr("src", `./images/${media}1.png`);
+    }
+  );
+
   $("#nav ul li a").hover(
     function() {
       if ($(this).hasClass("active")) {
@@ -108,14 +145,10 @@ $(document).ready(function() {
 
     animateLink($(this));
 
-    // if ($currentLink) {
-    //   $currentLink.animate(
-    //     { color: "#aaa", backgroundColor: "rgb(15, 15, 15)" },
-    //     500
-    //   );
-    // }
-    // $currentLink = $(this);
-    // $currentLink.animate({ color: "black", backgroundColor: "white" }, 500);
+    // IF SMALL SCREEN, sidenav
+    if ($(".sidebar .dropdown").css("display") !== "none") {
+      $(".sidebar .dropdown").css({ display: "none" });
+    }
 
     let scrollTo = $($(this).attr("href")).offset().top;
     let currentPosition = $("body").scrollTop();

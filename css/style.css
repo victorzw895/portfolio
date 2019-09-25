@@ -24,9 +24,33 @@ body {
 }
 
 /* NavBar */
-
-#nav select {
+#nav .sidebar {
   display: none;
+  background-color: rgb(15, 15, 15);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#nav .sidebar .icon {
+  padding: 0 15px;
+  height: 33px;
+  width: 33px;
+  vertical-align: middle;
+  margin: 10px 6px;
+  border-radius: 100%;
+}
+
+#nav .dropdown {
+  display: none;
+  width: 200px;
+  /* background-color: rgba(0, 0, 0, 0); */
+  /* position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1; */
 }
 
 #nav ul {
@@ -68,7 +92,7 @@ body {
   height: 33px;
   width: 33px;
   vertical-align: middle;
-  margin: 10px 6px 0;
+  margin: 10px 6px;
   border-radius: 100%;
 }
 /* 
@@ -95,14 +119,19 @@ body {
 }
 
 /* Responsive on mobile */
-/* @media (max-width: 960px) {
-  nav ul {
+@media (max-width: 900px) {
+  #nav ul {
     display: none;
   }
-  nav select {
-    display: inline-block;
+  #nav select {
+    display: block;
   }
-} */
+
+  #nav .sidebar {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 
 /* Portfolio name */
 #welcome {
