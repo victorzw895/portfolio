@@ -329,6 +329,18 @@ div.unfocused {
   color: white;
 }
 
+.videos {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+video:focus {
+  outline: none;
+}
+
 /* Footer */
 footer {
   margin: 0;
