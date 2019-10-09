@@ -177,6 +177,11 @@ body {
 }
 
 /* Sections */
+.main-section {
+  min-height: 92.5vh; /* minus nav height */
+  /* padding-top: 50px; */
+}
+
 .section {
   min-height: 92.5vh; /* minus nav height */
   display: flex;
