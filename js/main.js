@@ -150,7 +150,7 @@ $(document).ready(function() {
       $(".sidebar .dropdown").css({ display: "none" });
     }
 
-    let scrollTo = $($(this).attr("href")).offset().top;
+    let scrollTo = $($(this).attr("href")).position().top;
     let currentPosition = $("body").scrollTop();
     $("html, body").animate(
       {
