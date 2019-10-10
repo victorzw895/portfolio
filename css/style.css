@@ -304,6 +304,7 @@ div.unfocused {
 #expSkills .wrapper {
   display: flex;
   justify-content: flex-start;
+  margin-top: -100px;
 }
 
 #experience,
