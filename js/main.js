@@ -75,18 +75,17 @@ $(document).ready(function () {
 	// $('nav ul li a')
 	$currentLink = null;
 	let currentSection = null;
-	let navHeight = $("#nav .sidebar").outerHeight(true);
+	const sidebarHeight = $("#nav .sidebar").outerHeight(true);
+	const navHeight = $("#nav ul").outerHeight(true);
+	let navBarHeight = navHeight;
 
 	const animateLink = (link) => {
-		const isIcon =
-			($currentLink && $currentLink.hasClass("icon")) ||
-			(link && link.hasClass("icon"));
+		const isIcon = link && link.hasClass("icon");
+		if (isIcon) return;
+
 		if ($currentLink) {
-			console.log(isIcon);
 			$currentLink.animate(
-				isIcon
-					? {}
-					: { color: "#aaa", backgroundColor: "rgb(15, 15, 15)" },
+				{ color: "#aaa", backgroundColor: "rgb(15, 15, 15)" },
 				500
 			);
 			$currentLink.removeClass("active");
@@ -97,7 +96,7 @@ $(document).ready(function () {
 			$currentLink = link;
 			$currentLink.addClass("active");
 			$currentLink.animate(
-				isIcon ? {} : { color: "black", backgroundColor: "white" },
+				{ color: "black", backgroundColor: "white" },
 				500
 			);
 		}
@@ -109,7 +108,7 @@ $(document).ready(function () {
 		}
 		if (
 			e.target.scrollTop >=
-			$("#passions").position().top + $("body").scrollTop() - navHeight
+			$("#passions").position().top + $("body").scrollTop() - navBarHeight
 		) {
 			if (currentSection !== "passions") {
 				currentSection = "passions";
@@ -117,15 +116,17 @@ $(document).ready(function () {
 			}
 		} else if (
 			e.target.scrollTop >=
-			$("#expSkills").position().top + $("body").scrollTop() - navHeight
+			$("#expSkills").position().top +
+				$("body").scrollTop() -
+				navBarHeight
 		) {
 			if (currentSection !== "expSkills") {
 				currentSection = "expSkills";
-				animateLink($("a[href='#experience']"));
+				animateLink($("a[href='#expSkills']"));
 			}
 		} else if (
 			e.target.scrollTop >=
-			$("#projects").position().top + $("body").scrollTop() - navHeight
+			$("#projects").position().top + $("body").scrollTop() - navBarHeight
 		) {
 			if (currentSection !== "projects") {
 				currentSection = "projects";
@@ -133,19 +134,11 @@ $(document).ready(function () {
 			}
 		} else if (
 			e.target.scrollTop >=
-			$("#about-me").position().top + $("body").scrollTop() - navHeight
+			$("#about-me").position().top + $("body").scrollTop() - navBarHeight
 		) {
 			if (currentSection !== "about-me") {
 				currentSection = "about-me";
 				animateLink($("a[href='#about-me']"));
-			}
-		} else if (
-			e.target.scrollTop >=
-			$("#welcome").position().top + $("body").scrollTop() - navHeight
-		) {
-			if (currentSection !== "welcome") {
-				currentSection = "welcome";
-				animateLink($("a[href='#welcome']"));
 			}
 		} else {
 			if (currentSection) {
@@ -165,13 +158,14 @@ $(document).ready(function () {
 		// IF SMALL SCREEN, sidenav
 		if ($(".sidebar .dropdown").css("display") !== "none") {
 			$(".sidebar .dropdown").css({ display: "none" });
+			navBarHeight = sidebarHeight;
 		}
 
 		let scrollTo = $($(this).attr("href")).position().top;
 		let currentPosition = $("body").scrollTop();
 		$("html, body").animate(
 			{
-				scrollTop: scrollTo + currentPosition - navHeight + 1,
+				scrollTop: scrollTo + currentPosition - navBarHeight + 1,
 			},
 			500,
 			"linear"
